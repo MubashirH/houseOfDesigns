@@ -150,12 +150,12 @@ p {
   background-image: url("../images/team/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg");
 }
 .happy_clients .member .info {
-  height: 120;
+  height: 120px;
   background: #1c1c1c;
   width: 80%;
   margin: 0 auto;
   position: relative;
-  top: -40px;
+  top: -41px;
 }
 
 /*# sourceMappingURL=style.css.map */
