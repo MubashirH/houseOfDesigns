@@ -1,0 +1,188 @@
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+//media queres
+@mixin screen1020 {
+    @media (max-width: 1020px) {
+        @content;
+    }
+}
+//medium screens
+@mixin screen768 {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin screen600 {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+// small screens
+@mixin screen480 {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin screen320 {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+
+.logo {
+    background-image: url('../images/icons/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 80px;
+    width: 70px;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+}
+
+.menu {
+    .logo {
+        background-image: url('../images/icons/logo\ black.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 80px;
+        z-index: 1000;
+        width: 70px;
+        position: absolute;
+        left: 10%;
+        top: 5%;
+    }
+}
+
+
+.background_lines{ 
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    .border {
+        border-color: #7272720f !important
+    }
+}
+
+.services {
+    margin-bottom: 100px;
+    .item {
+        text-align: center;
+        margin-top: 30px;
+        img {
+            width: 50%;
+        }
+    }
+}
+
+.supplier, .clients {
+    position: relative;
+    margin-bottom: 100px;
+    // .container {
+    //     overflow: hidden;}
+    .row {
+        flex-wrap: nowrap;
+        margin: 0;
+        .inner-items {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img { 
+                border-radius: 5px;
+                width: 80%;
+            }
+        }
+    }
+    .swiper-button-next, .swiper-button-prev {
+        bottom: auto;
+        top: 40px;
+        color: black;
+        font-weight: 700;
+        text-decoration: none;
+        margin: 0;
+        width: auto;
+        z-index: 100;
+        opacity: 1;
+        &:focus { outline: transparent; }
+        &:hover {
+            color: #0097da;
+        }
+        &::after { display: none;}
+        @include screen600() { font-size: 12px;}
+    }
+    .swiper-button-next {
+        right: 10%; 
+        @include screen768() {
+            right: 6%;
+        }
+    }
+    .swiper-button-prev { 
+        right: 15%; left: auto; padding-right: 2%; border-right: 2px solid rgb(39, 39, 39);
+        @include screen1020() { right: 11%; }
+        @include screen768() { right: 13%; }
+        @include screen600() { right: 15%; }
+
+    }
+}
+
+.supplier {
+    .swiper-container {
+        @include screen600() {
+            margin-top: 20px;
+        }
+    }
+}
+
+.happy_clients{
+    .member {
+        .image {
+            height: 0px;
+            padding-bottom: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        &:nth-child(1){
+            .image {
+                background-image: url('../images/team/callum-blacoe-Id6U55AZMpg-unsplash.jpg');
+            }
+        }
+        &:nth-child(2){
+            .image {
+                background-image: url('../images/team/harishan-kobalasingam-8PMvB4VyVXA-unsplash.jpg');
+            }
+        }
+        &:nth-child(3){
+            .image {
+                background-image: url('../images/team/imansyah-muhamad-putera-n4KewLKFOZw-unsplash.jpg');
+            }
+        }
+        &:nth-child(4){
+            .image {
+                background-image: url('../images/team/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg');
+            }
+        }
+        .info {
+            height: 120;
+            background: #1c1c1c;
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+            top: -40px;
+        }
+    }
+}

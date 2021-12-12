@@ -1,0 +1,161 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+.logo {
+  background-image: url("../images/icons/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80px;
+  width: 70px;
+  position: absolute;
+  left: 10%;
+  top: 5%;
+}
+
+.menu .logo {
+  background-image: url("../images/icons/logo black.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80px;
+  z-index: 1000;
+  width: 70px;
+  position: absolute;
+  left: 10%;
+  top: 5%;
+}
+
+.background_lines {
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.background_lines .border {
+  border-color: #7272720f !important;
+}
+
+.services {
+  margin-bottom: 100px;
+}
+.services .item {
+  text-align: center;
+  margin-top: 30px;
+}
+.services .item img {
+  width: 50%;
+}
+
+.supplier, .clients {
+  position: relative;
+  margin-bottom: 100px;
+}
+.supplier .row, .clients .row {
+  flex-wrap: nowrap;
+  margin: 0;
+}
+.supplier .row .inner-items, .clients .row .inner-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.supplier .row .inner-items img, .clients .row .inner-items img {
+  border-radius: 5px;
+  width: 80%;
+}
+.supplier .swiper-button-next, .supplier .swiper-button-prev, .clients .swiper-button-next, .clients .swiper-button-prev {
+  bottom: auto;
+  top: 40px;
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0;
+  width: auto;
+  z-index: 100;
+  opacity: 1;
+}
+.supplier .swiper-button-next:focus, .supplier .swiper-button-prev:focus, .clients .swiper-button-next:focus, .clients .swiper-button-prev:focus {
+  outline: transparent;
+}
+.supplier .swiper-button-next:hover, .supplier .swiper-button-prev:hover, .clients .swiper-button-next:hover, .clients .swiper-button-prev:hover {
+  color: #0097da;
+}
+.supplier .swiper-button-next::after, .supplier .swiper-button-prev::after, .clients .swiper-button-next::after, .clients .swiper-button-prev::after {
+  display: none;
+}
+@media (max-width: 600px) {
+  .supplier .swiper-button-next, .supplier .swiper-button-prev, .clients .swiper-button-next, .clients .swiper-button-prev {
+    font-size: 12px;
+  }
+}
+.supplier .swiper-button-next, .clients .swiper-button-next {
+  right: 10%;
+}
+@media (max-width: 768px) {
+  .supplier .swiper-button-next, .clients .swiper-button-next {
+    right: 6%;
+  }
+}
+.supplier .swiper-button-prev, .clients .swiper-button-prev {
+  right: 15%;
+  left: auto;
+  padding-right: 2%;
+  border-right: 2px solid #272727;
+}
+@media (max-width: 1020px) {
+  .supplier .swiper-button-prev, .clients .swiper-button-prev {
+    right: 11%;
+  }
+}
+@media (max-width: 768px) {
+  .supplier .swiper-button-prev, .clients .swiper-button-prev {
+    right: 13%;
+  }
+}
+@media (max-width: 600px) {
+  .supplier .swiper-button-prev, .clients .swiper-button-prev {
+    right: 15%;
+  }
+}
+
+@media (max-width: 600px) {
+  .supplier .swiper-container {
+    margin-top: 20px;
+  }
+}
+
+.happy_clients .member .image {
+  height: 0px;
+  padding-bottom: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.happy_clients .member:nth-child(1) .image {
+  background-image: url("../images/team/callum-blacoe-Id6U55AZMpg-unsplash.jpg");
+}
+.happy_clients .member:nth-child(2) .image {
+  background-image: url("../images/team/harishan-kobalasingam-8PMvB4VyVXA-unsplash.jpg");
+}
+.happy_clients .member:nth-child(3) .image {
+  background-image: url("../images/team/imansyah-muhamad-putera-n4KewLKFOZw-unsplash.jpg");
+}
+.happy_clients .member:nth-child(4) .image {
+  background-image: url("../images/team/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg");
+}
+.happy_clients .member .info {
+  height: 120;
+  background: #1c1c1c;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: -40px;
+}
+
+/*# sourceMappingURL=style.css.map */
