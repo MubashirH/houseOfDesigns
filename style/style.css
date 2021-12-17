@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #7272720f !important;
 }
 
-.body {
+.body_wrapper {
   position: relative;
   z-index: 2;
 }
