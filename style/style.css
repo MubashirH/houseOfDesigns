@@ -1,9 +1,11 @@
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
 }
 
-p {
-  font-family: "Roboto", sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 3;
 }
 
 .logo {
@@ -39,6 +41,11 @@ p {
 }
 .background_lines .border {
   border-color: #7272720f !important;
+}
+
+.body {
+  position: relative;
+  z-index: 2;
 }
 
 .services {
@@ -130,32 +137,92 @@ p {
   }
 }
 
-.happy_clients .member .image {
+.projects .image-wrapper {
+  position: relative;
+  height: fit-content;
+  margin-bottom: 30px;
+}
+.projects .image-wrapper .info {
+  position: absolute;
+  z-index: 3;
+  transition: opacity 300ms;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.projects .image-wrapper .info h4 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-family: "Roboto", sans-serif;
+}
+.projects .image-wrapper .info p {
+  font-style: italic;
+  font-weight: 300;
+  font-family: "Alegreya Sans", sans-serif;
+}
+.projects .image-wrapper a {
+  transition: opacity 250ms;
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.projects .image-wrapper img {
+  width: 100%;
+}
+.projects .image-wrapper:hover .info {
+  opacity: 1;
+}
+.projects .image-wrapper:hover a {
+  opacity: 0.7;
+}
+
+.our_team .member .image {
   height: 0px;
   padding-bottom: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.happy_clients .member:nth-child(1) .image {
+.our_team .member:nth-child(1) .image {
   background-image: url("../images/team/callum-blacoe-Id6U55AZMpg-unsplash.jpg");
 }
-.happy_clients .member:nth-child(2) .image {
+.our_team .member:nth-child(2) .image {
   background-image: url("../images/team/harishan-kobalasingam-8PMvB4VyVXA-unsplash.jpg");
 }
-.happy_clients .member:nth-child(3) .image {
+.our_team .member:nth-child(3) .image {
   background-image: url("../images/team/imansyah-muhamad-putera-n4KewLKFOZw-unsplash.jpg");
 }
-.happy_clients .member:nth-child(4) .image {
+.our_team .member:nth-child(4) .image {
   background-image: url("../images/team/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg");
 }
-.happy_clients .member .info {
+.our_team .member .info {
   height: 120px;
   background: #1c1c1c;
   width: 80%;
   margin: 0 auto;
   position: relative;
   top: -41px;
+  font-family: "Roboto", sans-serif;
+}
+.our_team .member .info .designation {
+  position: relative;
+  margin: 0;
+}
+.our_team .member .info .designation::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 1px;
+  left: -45px;
+  top: -8px;
+  background-color: #F8F0E3;
 }
 
 /*# sourceMappingURL=style.css.map */
