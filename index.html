@@ -13,9 +13,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,100;1,300&family=Montserrat:wght@100;300;400;500;600&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
         <link href="style/hamburger.css" rel="stylesheet">
+        <link href="style/project-moda.css" rel="stylesheet">
         <link href="style/style.css" rel="stylesheet">
         </head> 
         <body>
+
+            <div id="project-modal">
+
+            </div>
 
             <!--Menu Section-->
             <div class="menu">
@@ -31,12 +36,14 @@
                     </span>
                 </label>
                 <nav id="menu">
-                    <a href="#">Lorem.</a>
-                    <a href="#">Nesciunt!</a>
-                    <a href="#">Magnam.</a>
-                    <a href="#">Ipsum.</a>
-                    <a href="#">Voluptatem.</a>
-                    <a href="#">Quibusdam.</a>
+                    <a onClick="closeMenu()" href="#">HOME</a>
+                    <a onClick="closeMenu()" href="#services">SERVICES</a>
+                    <a onClick="closeMenu()" href="#clients">OUR CLIENTS</a>
+                    <a onClick="closeMenu()" href="#about">ABOUT US</a>
+                    <a onClick="closeMenu()" href="#gallery">GALLERY</a>
+                    <a onClick="closeMenu()" href="#team">THE TEAM</a>
+                    <a onClick="closeMenu()" href="#supplier">OUR SUPPLIERS</a>
+                    <a onClick="closeMenu()" href="#find">FIND US</a>
                 </nav>
             </div>
 
@@ -57,57 +64,41 @@
             <div class="body_wrapper">
 
             <!--Services-->
-                <div class="container-sm services mt-5">
+                <div id="services" class="container-sm services mt-5">
                         <div class="container">
-                            <h1 class="text-center">Services We Provide</h1>
+                            <h1 class="text-center">SERVICES WE PROVIDE</h1>
                             <div class="row mt-5">
                                 <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
                                     <img src='./images/services/false-ceelng.png' alt='false-ceelng'>
-                                    <p class="text-center mt-2">False Ceiling</p>
+                                    <p class="text-center mt-2">Electrical Works</p>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
                                     <img src='./images/services/dressing-table.png' alt='Dressing Table'>
-                                    <p class="text-center mt-2">Dressing Table</p>
+                                    <p class="text-center mt-2">False ceiling</p>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
                                     <img src='./images/services/kitchen.png' alt='kitchen'>
-                                    <p class="text-center mt-2">Kitchen</p>
+                                    <p class="text-center mt-2">Plumbing</p>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
                                     <img src='./images/services/stone-wall.png' alt='stone-cladding'>
-                                    <p class="text-center mt-2">Stone Cladding</p>
+                                    <p class="text-center mt-2">Woodworks</p>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
                                     <img src='./images/services/study-table.png' alt='study-table'>
-                                    <p class="text-center mt-2">Study Table</p>
+                                    <p class="text-center mt-2">Furnitures</p>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
                                     <img src='./images/services/tv-unit.png' alt='TV Unit'>
-                                    <p class="text-center mt-2">TV Unit</p>
+                                    <p class="text-center mt-2">Stone Cladding</p>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
                                     <img src='./images/services/wardrobe.png' alt='wardrobe'>
-                                    <p class="text-center mt-2">Wardrobe Unit</p>
+                                    <p class="text-center mt-2">Wooden Flooring</p>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
                                     <img src='./images/services/wallpaper.png' alt='wallpaper'>
-                                    <p class="text-center mt-2">Wallpaper</p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
-                                    <img src='./images/services/crocery.png' alt='crocery'>
-                                    <p class="text-center mt-2">Crockery Unit</p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
-                                    <img src='./images/services/lighting.png' alt='Lighting'>
-                                    <p class="text-center mt-2">Lighting</p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
-                                    <img src='./images/services/painting.png' alt='painting'>
-                                    <p class="text-center mt-2">Painting</p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
-                                    <img src='./images/services/counter-top.png' alt='counter-top'>
-                                    <p class="text-center mt-2">Counter Top</p>
+                                    <p class="text-center mt-2">Glass Partition</p>
                                 </div>
                             </div>
                         </div>
@@ -116,9 +107,9 @@
     
 
                 <!--Happy Clients-->
-                <div id="supplier" class="supplier mt-5">
+                <div id="clients" class="supplier mt-5">
                     <div class="container">
-                        <h1>Our Trusted Suppliers</h1>
+                        <h1 class="text-center">OUR TRUSTED SUPPLIERS</h1>
                         <div class="row mt-5">
                             <div class="supplier-container swiper-container">
                                 <div class="swiper-wrapper">
@@ -154,97 +145,114 @@
                     </div>
                 </div>
 
+                <!--About Company-->
+                <div id="about" class="container about_company mt-5">
+                    <div class="row">
+                        <div class="col-12 col-md-5 col-lg-7 image">
+                        </div>
+                        <div class="col-12 col-md-7 col-lg-5 info">
+                            <div class="company">
+                                <h3>ABOUT OUR COMPANY</h3>
+                                <p>House of Design is a Unique interior design company in Bangalore offering end to end service in Architecture & Interior.Whether you need a minimalistic kitchen or full house interiors.<br/>
+
+                                    We strongly believe that the colors and lights play a predominant role in defining the taste of your house.<br/>
+                                    
+                                    We have expertise to make sure the project runs smoothly and gives you the best results possible.Because we are a small design firm, we are extremely flexible & nimble.We have relationship with many local craftsman and subcontractors,so you can be assured that the project is completed with the higher standards
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <!--Gallery-->
-                <div class="container projects mt-5">
-                    <h1>Projects By Us</h1>
+                <div id="gallery" class="container projects mt-5">
+                    <h1 class="text-center">PROJECTS BY US</h1>
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-6">
-                            <div class="w-100 image-wrapper">
+                            <div class="w-100 image-wrapper" >
                                 <div class="info">
-                                    <h4 class="text-center">Project</h4>
+                                    <h4 class="text-center">Mr. Anshuman</h4>
                                     <p class="text-center">Type</p>
                                 </div>
-                                <a></a>
-                                <img src="images/interior designs/amanda-macedo-VqiXghm4L9w-unsplash.jpg" alt="project_name">
+                                <a href="#" onClick="openProjectImages('project1');event.preventDefault();"></a>
+                                <img src="images/projects/anshuman/IMG_20211125_181454.jpg" alt="project_name">
                             </div>
                             <div class="w-100 image-wrapper">
                                 <div class="info">
-                                    <h4 class="text-center">Project</h4>
+                                    <h4 class="text-center">Ms. Deepika</h4>
                                     <p class="text-center">Type</p>
                                 </div>
-                                <a></a>
-                                <img src="images/interior designs/aranprime-KbytCpI1i5I-unsplash.jpg" alt="project_name">
+                                <a href="#" onClick="openProjectImages('project2');event.preventDefault();"></a>
+                                <img src="images/projects/deepika/IMG_20211209_215125.jpg" alt="project_name">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-6 mt-4">
                             <div class="w-100 image-wrapper">
                                 <div class="info">
-                                    <h4 class="text-center">Project</h4>
+                                    <h4 class="text-center">Mr. Ramprasad</h4>
                                     <p class="text-center">Type</p>
                                 </div>
-                                <a></a>
-                                <img src="images/interior designs/hutomo-abrianto-9ZvuWg8deho-unsplash.jpg" alt="project_name">
+                                
+                                <a href="#" onClick="openProjectImages('project3');event.preventDefault();"></a>
+                                <img src="images/projects/ramprasad/Living.png" alt="project_name">
                             </div>
                             <div class="w-100 image-wrapper">
                                 <div class="info">
-                                    <h4 class="text-center">Project</h4>
+                                    <h4 class="text-center">Ms. Tanvi</h4>
                                     <p class="text-center">Type</p>
                                 </div>
-                                <a></a>
-                                <img src="images/interior designs/jean-philippe-delberghe-Ry9WBo3qmoc-unsplash.jpg" alt="project_name">
+                                
+                                <a href="#" onClick="openProjectImages('project4');event.preventDefault();"></a>
+                                <img src="images/projects/tanvi/gbr view 2.png" alt="project_name">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-6">
                             <div class="w-100 image-wrapper">
                                 <div class="info">
-                                    <h4 class="text-center">Project</h4>
+                                    <h4 class="text-center">Mr. Vijayavel</h4>
                                     <p class="text-center">Type</p>
                                 </div>
-                                <a></a>
-                                <img src="images/interior designs/kam-idris-_HqHX3LBN18-unsplash.jpg" alt="project_name">
-                            </div>
-                            <div class="w-100 image-wrapper">
-                                <div class="info">
-                                    <h4 class="text-center">Project</h4>
-                                    <p class="text-center">Type</p>
-                                </div>
-                                <a></a>
-                                <img src="images/interior designs/nathan-oakley-ueJ2oJeEK-U-unsplash.jpg" alt="project_name">
+                                
+                                <a href="#" onClick="openProjectImages('project5');event.preventDefault();"></a>
+                                <img src="images/projects/vijayavel/ad766baf2de33df1b827bf830c97fbb9.png" alt="project_name">
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!--Team-->
-                <div class="container-sm our_team mt-5">
-                    <h2>Our Team</h2>
+                <div id="team" class="container-sm our_team mt-5">
+                    <h2 class="text-center">PEOPLE BEHIND THE IDEA</h2>
+                    <p class="text-center">We are a Young team of 4, who are passionate towards the designing and understanding the client taste and delivering the projects as per the commitments.
+                    </p>
                     <div class="row pt-5">
                         <div class="member col-lg-3 col-md-6">
                             <div class="image"></div>
                             <div class="info d-flex flex-column align-items-center justify-content-center">
-                                <h5>Member Name</h5>
-                                <p class="designation">Designation</p>
+                                <h5>Sivaraman</h5>
+                                <p class="designation">Design Consultant</p>
                             </div>
                         </div>
                         <div class="member mt-lg-5 col-lg-3 col-md-6">
                             <div class="image"></div>
                             <div class="info d-flex flex-column align-items-center justify-content-center">
-                                <h5>Member Name</h5>
-                                <p class="designation">Designation</p>
+                                <h5>Pradeep </h5>
+                                <p class="designation">Technical Head</p>
                             </div>
                         </div>
                         <div class="member mt-md-5 mt-lg-0 col-lg-3 col-md-6">
                             <div class="image"></div>
                             <div class="info d-flex flex-column align-items-center justify-content-center">
-                                <h5>Member Name</h5>
-                                <p class="designation">Designation</p>
+                                <h5>Ganapathy Venkatesh</h5>
+                                <p class="designation">Project Manager</p>
                             </div>
                         </div>
                         <div class="member mt-md-5 mt-lg-5 col-lg-3 col-md-6">
                             <div class="image"></div>
                             <div class="info d-flex flex-column align-items-center justify-content-center">
-                                <h5>Member Name</h5>
-                                <p class="designation">Designation</p>
+                                <h5>Ranjith </h5>
+                                <p class="designation">Project Manager</p>
                             </div>
                         </div>
                     </div>
@@ -290,7 +298,19 @@
                     </div>
                 </div>
 
-                <!---->
+                <!--map-->
+                <div id="find" class="container-full map">
+                    <h1 class="text-center">FIND US</h1>
+                    <div class="image w-100">
+                        <a href="shorturl.at/svwT4" target="blank"></a>
+                    </div>
+                </div>
+
+                <!--footer-->
+                <div class="container-full mt-5 footer pt-4 pb-4">
+                    <div class="row">
+                    </div>
+                </div>
 
 
             </div>
@@ -301,8 +321,10 @@
 
 
             <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
                 
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+            <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+            <script src="js/image-sliders.js"></script>
+            <script src="js/script.js"></script>
         </body>
 </html>

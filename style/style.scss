@@ -9,6 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 $off-white: #F8F0E3;
+$back-black: rgb(27, 27, 27);
 
 
 //media queres
@@ -41,6 +42,10 @@ $off-white: #F8F0E3;
     @media (max-width: 320px) {
         @content;
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 
@@ -172,6 +177,7 @@ $off-white: #F8F0E3;
             h4 {
                 font-weight: 300;
                 letter-spacing: 2px;
+                line-height: 1.2;
                 font-family: 'Roboto',sans-serif;
             }
             p {font-style: italic;font-weight: 300; font-family: 'Alegreya Sans', sans-serif;}
@@ -195,6 +201,31 @@ $off-white: #F8F0E3;
         &:hover {
             .info{opacity: 1;}
             a{opacity:0.7}
+        }
+    }
+}
+
+
+
+//about company
+.about_company {
+    .image {
+        height: 350px;
+        background-image: url('../images/interior_designs/amanda-macedo-VqiXghm4L9w-unsplash.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .info {
+        position: relative;
+        .company {
+            background-color: $back-black;
+            padding: 7% 15%;
+            width: 120%;
+            position: absolute;
+            left: -20%;
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
 }
@@ -251,4 +282,32 @@ $off-white: #F8F0E3;
             }
         }
     }
+}
+
+//map
+.map {
+    .image {
+        position: relative;
+        height: 400px;
+        background-image: url('../images/map.jpg');
+        background-position: center;
+        background-size: cover;
+        filter: grayscale(1);
+        transition: all 250ms ease-in-out;
+        &:hover {
+            filter: grayscale(0);
+        }
+        a {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+        }
+    }
+}
+
+.footer {
+    background-color: $back-black;
 }

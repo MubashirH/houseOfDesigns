@@ -8,6 +8,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 3;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .logo {
   background-image: url("../images/icons/logo.png");
   background-repeat: no-repeat;
@@ -154,6 +158,7 @@ h1, h2, h3, h4, h5, h6 {
 .projects .image-wrapper .info h4 {
   font-weight: 300;
   letter-spacing: 2px;
+  line-height: 1.2;
   font-family: "Roboto", sans-serif;
 }
 .projects .image-wrapper .info p {
@@ -181,6 +186,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 .projects .image-wrapper:hover a {
   opacity: 0.7;
+}
+
+.about_company .image {
+  height: 350px;
+  background-image: url("../images/interior_designs/amanda-macedo-VqiXghm4L9w-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about_company .info {
+  position: relative;
+}
+.about_company .info .company {
+  background-color: #1b1b1b;
+  padding: 7% 15%;
+  width: 120%;
+  position: absolute;
+  left: -20%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .our_team .member .image {
@@ -223,6 +248,31 @@ h1, h2, h3, h4, h5, h6 {
   left: -45px;
   top: -8px;
   background-color: #F8F0E3;
+}
+
+.map .image {
+  position: relative;
+  height: 400px;
+  background-image: url("../images/map.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(1);
+  transition: all 250ms ease-in-out;
+}
+.map .image:hover {
+  filter: grayscale(0);
+}
+.map .image a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.footer {
+  background-color: #1b1b1b;
 }
 
 /*# sourceMappingURL=style.css.map */
