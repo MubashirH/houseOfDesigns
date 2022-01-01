@@ -25,7 +25,7 @@ async function openProjectImages(e) {
               prevEl: '.swiper-button-prev',
             }
         })
-    }, 1000)
+    }, 4000)
 }
 
 closeProjects = () => {
