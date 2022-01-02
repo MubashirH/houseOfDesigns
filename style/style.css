@@ -253,12 +253,48 @@ html {
   background-color: #F8F0E3;
 }
 
+.map h2 {
+  position: relative;
+}
+.map h2::after {
+  position: absolute;
+  content: none;
+  height: 1px;
+  width: 30%;
+  background-color: #F8F0E3;
+  left: 0;
+  bottom: 10px;
+}
+.map .input {
+  background-color: #1c1c1c;
+  padding: 10px;
+  position: relative;
+  opacity: 1;
+  border: none;
+}
+.map button {
+  background: none;
+  color: #F8F0E3;
+  position: relative;
+  border: none;
+  z-index: 2;
+}
+.map button::before {
+  content: "";
+  position: absolute;
+  background-color: #1c1c1c;
+  height: 10px;
+  width: 80%;
+  left: 0px;
+  bottom: 5px;
+  z-index: -1;
+}
 .map .icon {
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 40px;
-  line-height: 1.6;
+  line-height: 2;
   margin: 0;
 }
 .map a {
@@ -277,8 +313,8 @@ html {
 }
 .map .social a {
   display: inline-block;
-  margin-right: 20px;
   height: 30px;
+  margin-right: 15px;
   width: 30px;
   background-position: center;
   background-repeat: no-repeat;
