@@ -83,7 +83,7 @@ html {
 .supplier .swiper-button-next, .supplier .swiper-button-prev, .clients .swiper-button-next, .clients .swiper-button-prev {
   bottom: auto;
   top: 40px;
-  color: black;
+  color: #F8F0E3;
   font-weight: 700;
   text-decoration: none;
   margin: 0;
@@ -236,6 +236,9 @@ html {
   top: -41px;
   font-family: "Roboto", sans-serif;
 }
+.our_team .member .info h5 {
+  line-height: 1;
+}
 .our_team .member .info .designation {
   position: relative;
   margin: 0;
@@ -243,13 +246,50 @@ html {
 .our_team .member .info .designation::before {
   content: "";
   position: absolute;
-  width: 180px;
+  width: 120%;
   height: 1px;
-  left: -45px;
+  left: -10%;
   top: -8px;
   background-color: #F8F0E3;
 }
 
+.map .icon {
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 40px;
+  line-height: 1.6;
+  margin: 0;
+}
+.map a {
+  color: #F8F0E3;
+  text-decoration: none;
+  display: block;
+}
+.map .mail {
+  background-image: url("../images/icons/email.png");
+}
+.map .phone {
+  background-image: url("../images/icons/phone-call.png");
+}
+.map .follow {
+  background-image: url("../images/icons/add-user.png");
+}
+.map .social a {
+  display: inline-block;
+  margin-right: 20px;
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.map .social a:nth-child(1) {
+  background-image: url("../images/icons/instagram.png");
+}
+.map .social a:nth-child(2) {
+  background-image: url("../images/icons/facebook.png");
+}
 .map .image {
   position: relative;
   height: 400px;

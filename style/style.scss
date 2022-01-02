@@ -124,7 +124,7 @@ html {
     .swiper-button-next, .swiper-button-prev {
         bottom: auto;
         top: 40px;
-        color: black;
+        color: $off-white;
         font-weight: 700;
         text-decoration: none;
         margin: 0;
@@ -267,15 +267,16 @@ html {
             position: relative;
             top: -41px;
             font-family: 'Roboto', sans-serif;
+            h5 { line-height: 1;}
             .designation {
                 position: relative;
                 margin: 0;
                 &::before {
                     content: '';
                     position:absolute;
-                    width: 180px;
+                    width: 120%;
                     height: 1px;
-                    left: -45px;
+                    left: -10%;
                     top: -8px;
                     background-color: $off-white;
                 }
@@ -286,6 +287,35 @@ html {
 
 //map
 .map {
+    .icon {
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-left: 40px;
+        line-height: 1.6;
+        margin: 0;
+    }
+    a { color: $off-white; text-decoration: none; display: block;}
+    .mail { background-image: url('../images/icons/email.png');}
+    .phone { background-image: url('../images/icons/phone-call.png') }
+    .follow { background-image: url('../images/icons/add-user.png') ; }
+    .social {
+        a {
+            display: inline-block;
+            margin-right: 20px;
+            height: 30px;
+            width: 30px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            &:nth-child(1) {
+                background-image: url('../images/icons/instagram.png');
+            }
+            &:nth-child(2) {
+                background-image: url('../images/icons/facebook.png');
+            }
+        }
+    }
     .image {
         position: relative;
         height: 400px;

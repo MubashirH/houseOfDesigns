@@ -15,7 +15,7 @@ async function openProjectImages(e) {
             slidesPerView: 1,
             observer: true,
             observeParents: true,
-      
+            spaceBetween: 50,
             pagination: {
               el: '.swiper-pagination',
               clickable: true,
@@ -25,11 +25,11 @@ async function openProjectImages(e) {
               prevEl: '.swiper-button-prev',
             }
         })
-    }, 4000)
+    }, 3000)
 }
 
 closeProjects = () => {
-    $('body').css('overflow','auto')
+    $('body').css('overflow-y','auto')
     $modalElement.empty()
     $modalElement.css('display', 'none')
 }

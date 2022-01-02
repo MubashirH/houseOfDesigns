@@ -39,7 +39,7 @@
 }
 #project-modal .project-modal .swiper .swiper-slide img {
   display: block;
-  width: 50%;
+  height: 90%;
   object-fit: cover;
 }
 
