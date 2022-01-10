@@ -32,7 +32,7 @@ label {
 		position: fixed;
 		top: 1em;
 		left: 1em;
-		z-index: 1000;
+		z-index: 900;
 		width: 2em;
 		height: 2em;
 		margin: 0;
@@ -175,7 +175,7 @@ main {
 .visuallyhidden { border:0; clip:rect(0 0 0 0);	height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px; }
 
 /* misc */
-body { overflow-x: hidden; background: #0e1111; color: white; }
+body { overflow-x: hidden; color: white; }
 main { background: #3498db; padding: 5% 0; }
 article { width: 80%; margin: 0 auto; font-size: 1.3em; @media(min-width: 60em) { width: 50%; } }
 h1 { font-weight: 700; }

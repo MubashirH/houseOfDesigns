@@ -1,10 +1,15 @@
 closeMenu = () => {
     $('#navcheck').prop('checked',false)
 }
+$('body').css('overflow-y','hidden')
 
 $(document).ready(function() {
+    $('body').css('overflow-y','auto')
+    $('.loader-wrapper').fadeOut(3000)
+    setTimeout( () => {$('.loader-wrapper').css('display','none')}, 3000)
+    
+
     function openProjectImages(projectName) {
-        console.log(projectName)
         $('#project-modal').load(`${projectName}.html`)
     }
 

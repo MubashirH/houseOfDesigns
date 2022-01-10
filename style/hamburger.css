@@ -29,7 +29,7 @@ label .burger {
   position: fixed;
   top: 1em;
   left: 1em;
-  z-index: 1000;
+  z-index: 900;
   width: 2em;
   height: 2em;
   margin: 0;
@@ -197,7 +197,6 @@ main .content {
 /* misc */
 body {
   overflow-x: hidden;
-  background: #0e1111;
   color: white;
 }
 

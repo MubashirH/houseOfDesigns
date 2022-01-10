@@ -36,15 +36,40 @@ html {
 }
 
 .background_lines {
-  height: 100vh;
-  position: fixed;
+  height: 100%;
+  position: absolute;
   z-index: 1;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  background-color: #0e1111;
 }
 .background_lines .border {
   border-color: #7272720f !important;
+  border-bottom-color: #0e1111 !important;
+  border-top-color: #0e1111 !important;
+}
+
+.loader-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #0e1111;
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.parallax_back {
+  height: 100vh;
+  background-image: url("../images/projects/sanjay/FC 1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  position: fixed;
 }
 
 .body_wrapper {
@@ -52,8 +77,34 @@ html {
   z-index: 2;
 }
 
+.banner-wrapper {
+  height: 500px;
+  background-image: url("../images/projects/ramprasad/Balcony.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 250ms ease-in-out;
+  filter: grayscale(1);
+}
+.banner-wrapper h2 {
+  color: #F8F0E3;
+  line-height: 1.4;
+  width: 50%;
+  word-wrap: break-word;
+  font-weight: bold;
+  float: right;
+}
+.banner-wrapper:hover {
+  filter: grayscale(0);
+}
+
+.over-backgound-lines {
+  position: relative;
+  z-index: 2;
+}
+
 .services {
-  margin-bottom: 100px;
+  position: relative;
 }
 .services .item {
   text-align: center;
@@ -65,7 +116,7 @@ html {
 
 .supplier, .clients {
   position: relative;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 .supplier .row, .clients .row {
   flex-wrap: nowrap;
@@ -141,6 +192,9 @@ html {
   }
 }
 
+.projects {
+  position: relative;
+}
 .projects .image-wrapper {
   position: relative;
   height: fit-content;
@@ -188,9 +242,12 @@ html {
   opacity: 0.7;
 }
 
+.about_company {
+  position: relative;
+}
 .about_company .image {
   height: 350px;
-  background-image: url("../images/interior_designs/amanda-macedo-VqiXghm4L9w-unsplash.jpg");
+  background-image: url("../images/projects/ramprasad/Drawing Budhha.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -208,6 +265,9 @@ html {
   transform: translateY(-50%);
 }
 
+.our_team {
+  position: relative;
+}
 .our_team .member .image {
   height: 0px;
   padding-bottom: 100%;
@@ -253,6 +313,20 @@ html {
   background-color: #F8F0E3;
 }
 
+.banner-filler .info {
+  width: 50%;
+}
+.banner-filler .info h1 {
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+.map {
+  position: relative;
+}
+.map form {
+  margin-top: 33px;
+}
 .map h2 {
   position: relative;
 }
