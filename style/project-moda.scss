@@ -20,7 +20,7 @@
       .swiper-slide {
           text-align: center;
           font-size: 18px;
-  
+          padding: 5px 3%;
           /* Center slide text vertically */
           display: -webkit-box;
           display: -ms-flexbox;
@@ -37,12 +37,16 @@
         }
   
         .swiper-slide img {
-          display: block;
-          height: 90%;
+          max-height: 100%;
+          max-width: 100%;
           object-fit: cover;
         }
     }
   }
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: black;
 }
 
 .close {

@@ -64,7 +64,7 @@ html {
 
 .parallax_back {
   height: 100vh;
-  background-image: url("../images/projects/sanjay/FC 1.png");
+  background-image: url("../images/projects/ramprasad/Dining Area.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -79,7 +79,7 @@ html {
 
 .banner-wrapper {
   height: 500px;
-  background-image: url("../images/projects/ramprasad/Balcony.png");
+  background-image: url("../images/projects/mala/f6cf573fa205f395694734f931666d05.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -186,6 +186,9 @@ html {
   }
 }
 
+.supplier .swiper-container {
+  overflow: hidden;
+}
 @media (max-width: 600px) {
   .supplier .swiper-container {
     margin-top: 20px;
@@ -264,6 +267,21 @@ html {
   top: 50%;
   transform: translateY(-50%);
 }
+@media (max-width: 768px) {
+  .about_company .info {
+    margin-top: 20px;
+    background-color: #1b1b1b;
+  }
+  .about_company .info .company {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+    background-color: transparent;
+    padding: 0;
+    width: 100%;
+  }
+}
 
 .our_team {
   position: relative;
@@ -319,6 +337,12 @@ html {
 .banner-filler .info h1 {
   line-height: 1.3;
   font-weight: bold;
+}
+@media (max-width: 768px) {
+  .banner-filler .info {
+    width: 100%;
+    padding: 5%;
+  }
 }
 
 .map {

@@ -20,7 +20,16 @@ $(document).ready(function() {
         slidesPerView: 6,
         observer: true,
         observeParents: true,
-
+        breakpoints: {
+            320: {
+                slidesPerView: 4,
+                spaceBetween: 10 
+            },       
+            1024: {       
+               slidesPerView: 6,
+               spaceBetween: 10     
+            }
+        },
         pagination: {
         el: '.swiper-pagination',
         clickable: true,
