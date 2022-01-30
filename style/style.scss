@@ -115,6 +115,7 @@ html {
 .body_wrapper {
     position: relative;
     z-index: 2;
+    overflow-x: hidden;
 }
 
 .banner-wrapper {
@@ -132,6 +133,9 @@ html {
         word-wrap: break-word;
         font-weight: bold;
         float: right;
+    }
+    @include screen1020() {
+        filter: grayscale(0);
     }
     &:hover {
         filter: grayscale(0);

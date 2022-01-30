@@ -2,7 +2,7 @@
   display: none;
   height: 100vh;
   position: fixed;
-  background: #000000c7;
+  background: #000000e0;
   width: 100%;
   left: 50%;
   top: 50%;
@@ -45,7 +45,7 @@
 }
 
 .swiper-button-next, .swiper-button-prev {
-  color: black;
+  color: white;
 }
 
 .close {

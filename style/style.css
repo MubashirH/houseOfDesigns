@@ -75,6 +75,7 @@ html {
 .body_wrapper {
   position: relative;
   z-index: 2;
+  overflow-x: hidden;
 }
 
 .banner-wrapper {
@@ -93,6 +94,11 @@ html {
   word-wrap: break-word;
   font-weight: bold;
   float: right;
+}
+@media (max-width: 1020px) {
+  .banner-wrapper {
+    filter: grayscale(0);
+  }
 }
 .banner-wrapper:hover {
   filter: grayscale(0);

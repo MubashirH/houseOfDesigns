@@ -4,9 +4,10 @@ closeMenu = () => {
 $('body').css('overflow-y','hidden')
 
 $(document).ready(function() {
+    AOS.init() 
     $('body').css('overflow-y','auto')
-    $('.loader-wrapper').fadeOut(3000)
-    setTimeout( () => {$('.loader-wrapper').css('display','none')}, 3000)
+    $('.loader-wrapper').fadeOut(1000)
+    setTimeout( () => {$('.loader-wrapper').css('display','none')}, 1001)
     
 
     function openProjectImages(projectName) {
