@@ -61,6 +61,10 @@ html {
   top: 0;
   z-index: 1000;
 }
+.loader-wrapper #loader-image {
+  height: 150px;
+  width: 100px;
+}
 
 .parallax_back {
   height: 100vh;
@@ -301,16 +305,16 @@ html {
   background-position: center;
 }
 .our_team .member:nth-child(1) .image {
-  background-image: url("../images/team/callum-blacoe-Id6U55AZMpg-unsplash.jpg");
+  background-image: url("../images/team/Sivaram.jpeg");
 }
 .our_team .member:nth-child(2) .image {
-  background-image: url("../images/team/harishan-kobalasingam-8PMvB4VyVXA-unsplash.jpg");
+  background-image: url("../images/team/Pradeep.jpeg");
 }
 .our_team .member:nth-child(3) .image {
-  background-image: url("../images/team/imansyah-muhamad-putera-n4KewLKFOZw-unsplash.jpg");
+  background-image: url("../images/team/Ganapathy.jpeg");
 }
 .our_team .member:nth-child(4) .image {
-  background-image: url("../images/team/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg");
+  background-image: url("../images/team/Ranjith.jpeg");
 }
 .our_team .member .info {
   height: 120px;

@@ -1,18 +1,35 @@
+
+
+
+
+
 closeMenu = () => {
     $('#navcheck').prop('checked',false)
 }
+
 $('body').css('overflow-y','hidden')
+
+$(window).on('load',function() {
+    $('body').css('overflow-y','auto')
+    $('.loader-wrapper').fadeOut()
+    $('.loader-wrapper').css('display','none')
+})
 
 $(document).ready(function() {
     AOS.init() 
-    $('body').css('overflow-y','auto')
-    $('.loader-wrapper').fadeOut(1000)
-    setTimeout( () => {$('.loader-wrapper').css('display','none')}, 1001)
-    
-
     function openProjectImages(projectName) {
         $('#project-modal').load(`${projectName}.html`)
     }
+
+    var animation = lottie.loadAnimation({
+        container: document.getElementById('loader-image'),
+        path: 'https://assets4.lottiefiles.com/packages/lf20_xhwgqrsh.json',
+        // animationData: animation,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        name: "Logo Animation",
+      });
 
     var supplierSlider = new Swiper('.supplier-container', {
         direction: 'horizontal',

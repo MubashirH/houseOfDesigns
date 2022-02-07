@@ -100,6 +100,10 @@ html {
     left: 0;
     top: 0;
     z-index: 1000;
+    #loader-image {
+        height: 300px;
+        width: 300px;
+    }
 }
 
 .parallax_back {
@@ -311,22 +315,22 @@ html {
         }
         &:nth-child(1){
             .image {
-                background-image: url('../images/team/callum-blacoe-Id6U55AZMpg-unsplash.jpg');
+                background-image: url('../images/team/Sivaram.jpeg');
             }
         }
         &:nth-child(2){
             .image {
-                background-image: url('../images/team/harishan-kobalasingam-8PMvB4VyVXA-unsplash.jpg');
+                background-image: url('../images/team/Pradeep.jpeg');
             }
         }
         &:nth-child(3){
             .image {
-                background-image: url('../images/team/imansyah-muhamad-putera-n4KewLKFOZw-unsplash.jpg');
+                background-image: url('../images/team/Ganapathy.jpeg');
             }
         }
         &:nth-child(4){
             .image {
-                background-image: url('../images/team/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg');
+                background-image: url('../images/team/Ranjith.jpeg');
             }
         }
         .info {
