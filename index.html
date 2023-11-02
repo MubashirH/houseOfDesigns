@@ -1,522 +1,796 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        
-        <title>House Of Designs</title>
-        
-        <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <link rel="icon" type="image/png" href="./images/icons/logo black.png"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,100;1,300&family=Montserrat:wght@100;300;400;500;600&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-        <link href="style/hamburger.css" rel="stylesheet">
-        <link href="style/project-moda.css" rel="stylesheet">
-        <link href="style/aos.css" rel="stylesheet">
-        <link href="style/style.css" rel="stylesheet">
-        </head> 
-        <body>
+<head>
 
-            <div class="loader-wrapper justify-content-center align-items-center">
-                <div id="loader-image"></div>
+    <title>House Of Designs</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="icon" type="image/png" href="./images/icons/logo black.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,100;1,300&family=Montserrat:wght@100;300;400;500;600&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="style/hamburger.css" rel="stylesheet">
+    <link href="style/project-moda.css" rel="stylesheet">
+    <link href="style/aos.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="modal  fade map" id="enquiryModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="enqModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Submit your inquiry now!</h1>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body">
+                    <form id="modalEnquiryForm">
+                        <div class="row">
+                            <div class="col-12 col-md-5">
+                                <div class="mb-3">
+                                    <p class="mb-1">Property Type?</p>
+                                    <div>
+                                        <input type="radio" name="enqpropertyType" id="enq2_bhk" value="2 BHK">
+                                        <label for="enq2_bhk">2 BHK</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="enq2_5_bhk" name="enqpropertyType" value="2.5 BHK">
+                                        <label for="enq2_5_bhk">2.5 BHK</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="enqpropertyType" id="enq3_bhk" value="3 BHK">
+                                        <label for="enq3_bhk">3 BHK</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="enq3_5_bhk" name="enqpropertyType" value="3.5 BHK">
+                                        <label for="enq3_5_bhk">3.5 BHK</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="enqpropertyType" id="enqvilla_bunglow"
+                                            value="Villa/Bunglow">
+                                        <label for="enqvilla_bunglow">Villa/Bunglow</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <p class="mb-1">Your Budget?</p>
+                                    <div>
+                                        <input type="radio" name="enqbudget" id="enq6_8_lacs" value="6 Lacs - 8 Lacs">
+                                        <label for="enq6_8_lacs">6 Lacs - 8 Lacs</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="enq15_18_lacs" name="enqbudget"
+                                            value="8 Lacs - 12 Lacs">
+                                        <label for="enq15_18_lacs">8 Lacs - 12 Lacs</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="enqbudget" id="enq18_lacs" value="Above 12 Lacs">
+                                        <label for="enq18_lacs">Above 12 lacs</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-7">
+                                <div>
+                                    <p class="mb-1">Property Name?</p>
+                                    <div class="input-container mb-3">
+                                        <input type="text" id="enqpropertyName" name="enqpropertyName" />
+                                        <label for="enqpropertyName">Your Answer</label>
+                                    </div>
+                                    <p class="mb-1">Contact Info *</p>
+                                    <div class="input-container">
+                                        <input type="text" name="enqname" id="enqname" required />
+                                        <label for="enqname">Full Name</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" id="enqphone" name="enqphone" required />
+                                        <label for="enqphone">Phone Number</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="email" name="enqemail" id="enqemail" required />
+                                        <label for="enqemail">Email</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- <form id="modalEquiryForm" class="enquiryForm d-flex flex-wrap justify-content-between"
+                        method="post">
+                        <textarea placeholder="Write a message..." id="enqMessage" class="input w-100"
+                            rows="6"></textarea>
+                        <input placeholder="Your Name" id="enqName" class="input mt-3" />
+                        <input placeholder="Your Phonenumber" id="enqNumber" class="input mt-3" />
+                        <input placeholder="Your Email" id="enqEmail" class="input mt-3 w-100" />
+                    </form> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-bs-target="#enquiryCloseModal" data-bs-toggle="modal"
+                        data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="modalEnquiryBtn">Send Enquiry</button>
+                </div>
             </div>
-
-            <div id="project-modal">
-
+        </div>
+    </div>
+    <div class="modal fade map" id="enquiryCloseModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="enqModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Are you certain you don't want us to notify you about new designs?</p>
+                    <div class="w-100 d-flex justify-content-end">
+                        <button type="button" data-bs-target="#enquiryModal" data-bs-toggle="modal"
+                            data-bs-dismiss="modal">No</button>
+                        <button type="button" data-bs-dismiss="modal" class="enquireCloseYes">Yes</button>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <!--Menu Section-->
-            <div class="menu">
-                
-                <input type="checkbox" id="navcheck" role="button" title="menu">
-                <label for="navcheck" aria-hidden="true" title="menu">
-                    <span class="burger">
-                        <span class="bar">
-                            <span class="visuallyhidden">Menu</span>
-                        </span>
-                    </span>
-                </label>
-                <nav id="menu">
-                    <a onClick="closeMenu()" href="#">HOME</a>
-                    <a onClick="closeMenu()" href="#services">SERVICES</a>
-                    <a onClick="closeMenu()" href="#supplier">OUR SUPPLIERS</a>
-                    <a onClick="closeMenu()" href="#about">ABOUT US</a>
-                    <a onClick="closeMenu()" href="#gallery">GALLERY</a>
-                    <a onClick="closeMenu()" href="#team">THE TEAM</a>
-                    <a onClick="closeMenu()" href="#clients">Testimonies</a>
-                    <a onClick="closeMenu()" href="#find">FIND US</a>
-                </nav>
+    <div class="loader-wrapper justify-content-center align-items-center">
+        <div id="loader-image"></div>
+    </div>
+
+    <div class="directContact">
+        <div class="flex flex-column justify-content-around">
+            <div class="mb-3 icon"><a class="" href="https://api.whatsapp.com/send?phone=8667311305"
+                    target="_blank"><img src="./images/icons/whatsapp.png"></a>
             </div>
-
-            <div class="logo">
+            <div class="mb-3 icon"><a class="" href="tel:+918667311305"><img src="./images/icons/phone-call.png"></a>
             </div>
+        </div>
+    </div>
 
-            
-            <!--Prallax Background-->
-            <div class="parallax_back w-100"></div>
-            
+    <div id="project-modal">
 
+    </div>
 
-            <div class="body_wrapper">
+    <!--Menu Section-->
+    <div class="menu">
 
-            <!--Banner Section-->
-                <div class="banner-wrapper w-100 d-flex justify-content-start align-items-center ">
-                    <div class="info p-lg-5 p-md-3 p-sm-2 mt-lg-5 mb-lg-5 mt-md-4 mb-md-4 mt-sm-3 mb-sm-3">
-                        <h2 data-aos="fade-right">Creativity is allowing yourself to make mistakes. Design is knowing which ones to keep.</h2>
-                    </div>
-                </div>
+        <input type="checkbox" id="navcheck" role="button" title="menu">
+        <label class="menuBurger" for="navcheck" aria-hidden="true" title="menu">
+            <span class="burger">
+                <span class="bar">
+                    <span class="visuallyhidden">Menu</span>
+                </span>
+            </span>
+        </label>
+        <nav id="menu">
+            <a onClick="closeMenu()" href="#">HOME</a>
+            <a onClick="closeMenu()" href="#services">SERVICES</a>
+            <a onClick="closeMenu()" href="#supplier">OUR SUPPLIERS</a>
+            <a onClick="closeMenu()" href="#about">ABOUT US</a>
+            <a onClick="closeMenu()" href="#gallery">GALLERY</a>
+            <a onClick="closeMenu()" href="#team">THE TEAM</a>
+            <a onClick="closeMenu()" href="#clients">TESTIMONIES</a>
+            <a onClick="closeMenu()" href="#find">FIND US</a>
+        </nav>
+    </div>
 
-            <!--Services-->
-                <div id="services" class="row m-0 services pt-5">
-                    <div class="w-100 container-sm background_lines">
-                        <div class="row h-100">
-                            <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                        </div>
-                    </div>
-                        <div class="container over-backgound-lines">
-                            <h1 data-aos="fade-right" class="text-center">SERVICES WE PROVIDE</h1>
-                            <div class="row mt-5">
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-6 item" data-aos="fade-up">
-                                    <img src='./images/icons/wire(1).png' alt='false-ceelng'>
-                                    <p class="text-center mt-2">Electrical Works</p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-6 item" data-aos="fade-up">
-                                    <img src='./images/icons/ceiling-light.png' alt='Dressing Table'>
-                                    <p class="text-center mt-2">False ceiling</p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-6 item" data-aos="fade-up">
-                                    <img src='./images/icons/plumbing.png' alt='kitchen'>
-                                    <p class="text-center mt-2">Plumbing</p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-6 item" data-aos="fade-up">
-                                    <img src='./images/icons/hand-saw.png' alt='stone-cladding'>
-                                    <p class="text-center mt-2">Woodworks</p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-6 item" data-aos="fade-up">
-                                    <img src='./images/icons/furnitures.png' alt='study-table'>
-                                    <p class="text-center mt-2">Furnitures</p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-6 item" data-aos="fade-up">
-                                    <img src='./images/icons/parquet.png' alt='TV Unit'>
-                                    <p class="text-center mt-2">Stone Cladding</p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-6 item" data-aos="fade-up">
-                                    <img src='./images/icons/wood.png' alt='wardrobe'>
-                                    <p class="text-center mt-2">Wooden Flooring</p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-6 item" data-aos="fade-up">
-                                    <img src='./images/icons/window.png' alt='wallpaper'>
-                                    <p class="text-center mt-2">Glass Partition</p>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-    
-    
-
-                <!--Happy Clients-->
-                <div id="supplier" class="row m-0 supplier pt-5">
-                    <div class="w-100 container-sm p-0 background_lines">
-                        <div class="row h-100">
-                            <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                        </div>
-                    </div>
-                    <div class="container over-backgound-lines">
-                        <h1 data-aos="fade-right" class="text-center">OUR TRUSTED SUPPLIERS</h1>
-                        <div class="row mt-5">
-                            <div class="supplier-container swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/13_aRiKL17s6.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/17_8RBtSBFIt.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/18_u9Nx98RRj.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/1_703qYSv23.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/3_xMB9K5IAU.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/4_LL-KbsNVy.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/8_13tVaPI_7.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/arilam-logo.png" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/aristo.png" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/blum.png" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/D Partners logo184x83-01.webp" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/D Partners logo184x83-08.webp" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/D Partners logo184x83-12.webp" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/ebco-hardware-solutions-logo.png" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/greenply-logo.png" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/haefele_logo.png" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/hettich.png" alt="">
-                                    </div>
-                                    <div class="swiper-slide inner-items col-lg-2">
-                                        <img src="images/projects/Preferred partners/mernino_updated_logo.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-next supplier-next">Next</div>
-                        <div class="swiper-button-prev supplier-prev">Previous</div>
-                    </div>
-                </div>
-
-                <!--About Company-->
-                <div id="about" class="row m-0 about_company pt-5 pb-5">
-                    <div class="w-100 container-sm background_lines">
-                        <div class="row h-100">
-                            <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="container over-backgound-lines">
-                            <div class="row m-0 w-100">
-                                <div class="col-12 col-md-5 col-lg-7 image" data-aos="zoom-out">
-                                </div>
-                                <div class="col-12 col-md-7 col-lg-5 info">
-                                    <div class="company">
-                                        <h3 data-aos="fade-left">ABOUT OUR COMPANY</h3>
-                                        <p data-aos="fade-right">House of Design is a Unique interior design company in Bangalore offering end to end service in Architecture & Interior.Whether you need a minimalistic kitchen or full house interiors.<br/>
-        
-                                            We strongly believe that the colors and lights play a predominant role in defining the taste of your house.<br/>
-                                            
-                                            We have expertise to make sure the project runs smoothly and gives you the best results possible.Because we are a small design firm, we are extremely flexible & nimble.We have relationship with many local craftsman and subcontractors,so you can be assured that the project is completed with the higher standards
-                                            </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="logo">
+    </div>
 
 
-                <!--Gallery-->
-                <div id="gallery" class="row m-0 projects pt-5">
-                    <div class="w-100 container-sm background_lines">
-                        <div class="row h-100">
-                            <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                        </div>
-                    </div>
-                    <h1 data-aos="fade-right" class="text-center over-backgound-lines">PROJECTS BY US</h1>
-                    <div>
-                        <div class="container">
-                            <div class="row over-backgound-lines">
-                                <div class="col-12 col-md-6">
-                                    <div class="w-100 image-wrapper" data-aos="zoom-out" >
-                                        <div class="info">
-                                            <h4 class="text-center">Mr. Anshuman</h4>
-                                            <p class="text-center">4 BHK Duplex</p>
-                                        </div>
-                                        <a href="#" onClick="openProjectImages('project1');event.preventDefault();"></a>
-                                        <img src="images/projects/Anshuman Renders/4.png" alt="project_name">
-                                    </div>
-                                    <div class="w-100 image-wrapper" data-aos="zoom-out">
-                                        <div class="info">
-                                            <h4 class="text-center">Ms. Deepika</h4>
-                                            <p class="text-center">3 BHK</p>
-                                        </div>
-                                        <a href="#" onClick="openProjectImages('project2');event.preventDefault();"></a>
-                                        <img src="images/projects/deepika/IMG_20211209_215125.jpg" alt="project_name">
-                                    </div>
-                                    <div class="w-100 image-wrapper" data-aos="zoom-out">
-                                        <div class="info">
-                                            <h4 class="text-center">Mr. Mala</h4>
-                                            <p class="text-center">3 BHK</p>
-                                        </div>
-                                        
-                                        <a href="#" onClick="openProjectImages('project6');event.preventDefault();"></a>
-                                        <img src="images/projects/mala/577f1dff07d405420d681d058f6849cd.png" alt="project_name">
-                                    </div>
-                                    <div class="w-100 image-wrapper" data-aos="zoom-out">
-                                        <div class="info">
-                                            <h4 class="text-center">Mr. Vijayavel</h4>
-                                            <p class="text-center">3 BHK Villa</p>
-                                        </div>
-                                        
-                                        <a href="#" onClick="openProjectImages('project5');event.preventDefault();"></a>
-                                        <img src="images/projects/vijayavel/ad766baf2de33df1b827bf830c97fbb9.png" alt="project_name">
-                                    </div>
-                                    <div class="w-100 image-wrapper" data-aos="zoom-out">
-                                        <div class="info">
-                                            <h4 class="text-center">Mr. Kumar</h4>
-                                            <p class="text-center">3 BHK Villa</p>
-                                        </div>
-                                        
-                                        <a href="#" onClick="openProjectImages('project9');event.preventDefault();"></a>
-                                        <img src="images/projects/kumar/dfgdfg.png" alt="project_name">
-                                    </div>
-                                    <div class="w-100 image-wrapper" data-aos="zoom-out">
-                                        <div class="info">
-                                            <h4 class="text-center">Mr. Rajeev</h4>
-                                            <p class="text-center">3 BHK Villa</p>
-                                        </div>
-                                        
-                                        <a href="#" onClick="openProjectImages('project8');event.preventDefault();"></a>
-                                        <img src="images/projects/Rajeev/onjsdof.png" alt="project_name">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mt-4">
-                                    <div class="w-100 image-wrapper" data-aos="zoom-out">
-                                        <div class="info">
-                                            <h4 class="text-center">Mr. Ramprasad</h4>
-                                            <p class="text-center">4 BHK</p>
-                                        </div>
-                                        
-                                        <a href="#" onClick="openProjectImages('project3');event.preventDefault();"></a>
-                                        <img src="images/projects/ramprasad/Living.png" alt="project_name">
-                                    </div>
-                                    <div class="w-100 image-wrapper" data-aos="zoom-out">
-                                        <div class="info">
-                                            <h4 class="text-center">Mr. Sanjay</h4>
-                                            <p class="text-center">3 BHK</p>
-                                        </div>
-                                        
-                                        <a href="#" onClick="openProjectImages('project7');event.preventDefault();"></a>
-                                        <img src="images/projects/sanjay/3-2.png" alt="project_name">
-                                    </div>
-                                    <div class="w-100 image-wrapper" data-aos="zoom-out">
-                                        <div class="info">
-                                            <h4 class="text-center">Ms. Tanvi</h4>
-                                            <p class="text-center">3 BHK</p>
-                                        </div>
-                                        
-                                        <a href="#" onClick="openProjectImages('project4');event.preventDefault();"></a>
-                                        <img src="images/projects/tanvi/gbr view 2.png" alt="project_name">
-                                    </div>
-                                    <div class="w-100 image-wrapper" data-aos="zoom-out">
-                                        <div class="info">
-                                            <h4 class="text-center">Mr. Vijayavel</h4>
-                                            <p class="text-center">3 BHK Villa</p>
-                                        </div>
-                                        
-                                        <a href="#" onClick="openProjectImages('project5');event.preventDefault();"></a>
-                                        <img src="images/projects/vijayavel/ad766baf2de33df1b827bf830c97fbb9.png" alt="project_name">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Team-->
-                <div id="team" class="row w-100 m-0 our_team pt-5">
-                    <div class="w-100 container-sm background_lines p-0">
-                        <div class="row h-100 w-100 m-0">
-                            <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                        </div>
-                    </div>
-                    <h2 data-aos="fade-right" class="text-center over-backgound-lines">PEOPLE BEHIND THE IDEA</h2>
-                    <h5 data-aos="fade-left" class="text-center over-backgound-lines" style="line-height: 1.5;">We are a Young team of 4, who are passionate towards the designing and understanding the client taste and delivering the projects as per the commitments.
-                    </h5>
-                    <div>
-                        <div class="container">
-                            <div class="row pt-5 over-backgound-lines">
-                                <div class="member col-lg-3 col-md-6" data-aos="zoom-out">
-                                    <div class="image"></div>
-                                    <div class="info d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
-                                        <h5 class="mb-4 text-center">Sivaraman</h5>
-                                        <p class="designation">Design Consultant</p>
-                                    </div>
-                                </div>
-                                <div class="member mt-lg-5 col-lg-3 col-md-6" data-aos="zoom-out">
-                                    <div class="image"></div>
-                                    <div class="info d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
-                                        <h5 class="mb-4 text-center">Pradeep </h5>
-                                        <p class="designation">Technical Head</p>
-                                    </div>
-                                </div>
-                                <div class="member mt-md-5 mt-lg-0 col-lg-3 col-md-6" data-aos="zoom-out">
-                                    <div class="image"></div>
-                                    <div class="info d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
-                                        <h5 class="mb-4 text-center">Ganapathy Venkatesh</h5>
-                                        <p class="designation">Project Manager</p>
-                                    </div>
-                                </div>
-                                <div class="member mt-md-5 mt-lg-5 col-lg-3 col-md-6" data-aos="zoom-out">
-                                    <div class="image"></div>
-                                    <div class="info d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
-                                        <h5 class="mb-4 text-center">Ranjith </h5>
-                                        <p class="designation">Project Manager</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Filler Banner-->
-                <div class="banner-filler container-full p-5">
-                    <div class="info">
-                        <h1 data-aos="fade-right">A room should never allow the eye to settle in one place. It should smile at you and create fantasy.</h1>
-                    </div>
-                </div>
-
-    
-                <!--Suppliers-->
-                <div id="clients" class="row m-0 supplier pt-5">
-                    <div class="w-100 container-sm background_lines p-0">
-                        <div class="row h-100">
-                            <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="container ">
-                            <h1 data-aos="fade-right" class="text-center over-backgound-lines">Our Clients Testimonies</h1>
-                            <div class="row mt-5 over-backgound-lines">
-                                <div class="supplier-container swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide inner-items col-lg-2">
-                                            <img src="./images/suppliers/blum.png" alt="">
-                                        </div>
-                                        <div class="swiper-slide inner-items col-lg-2">
-                                            <img src="./images/suppliers/ebco-hardware-solutions-logo.png" alt="">
-                                        </div>
-                                        <div class="swiper-slide inner-items col-lg-2">
-                                            <img src="./images/suppliers/greenply-logo.png" alt="">
-                                        </div>
-                                        <div class="swiper-slide inner-items col-lg-2">
-                                            <img src="./images/suppliers/haefele_logo.png" alt="">
-                                        </div>
-                                        <div class="swiper-slide inner-items col-lg-2">
-                                            <img src="./images/suppliers/hettich.png" alt="">
-                                        </div>
-                                        <div class="swiper-slide inner-items col-lg-2">
-                                            <img src="./images/suppliers/aristo.png" alt="">
-                                        </div>
-                                        <div class="swiper-slide inner-items col-lg-2">
-                                            <img src="./images/suppliers/arilam-logo.png" alt="">
-                                        </div>
-                                        <div class="swiper-slide inner-items col-lg-2">
-                                            <img src="./images/suppliers/mernino_updated_logo.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next">Next</div>
-                            <div class="swiper-button-prev">Previous</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--map-->
-                <div id="find" class="row w-100 m-0 map">
-                    <div class="w-100 container-sm background_lines">
-                        <div class="row h-100">
-                            <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                            <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
-                        </div>
-                    </div>
-                    <h1 data-aos="fade-right" class="text-center over-backgound-lines">LET'S WORK TOGTHER</h1>
-                    <div>
-                        <div class="container over-backgound-lines">
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <form>
-                                        <textarea data-aos="zoom-in" data-aos-duration="1000" placeholder="Write a message..." class="input w-100" rows="6"></textarea>
-                                        <input data-aos="zoom-in" data-aos-duration="1500" placeholder="Your Name" class="input mt-3 w-100"/>
-                                        <input data-aos="zoom-in" data-aos-duration="2000" placeholder="Your Email" class="input mt-3 w-100"/>
-                                        <button data-aos="zoom-in" data-aos-duration="2500" class="mt-4">Send</button>
-                                    </form>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <h2 data-aos="fade-left">COLORFUL LIFE</h2>
-                                    <p data-aos="fade-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt vel turpis eget tempor. Aliquam erat volutpat. Etiam est mauris, imperdiet quis orci rutrum, sodales porta sem. Maecenas at tristique dui, ut rutrum sapien. Donec nec lorem id risus lacinia placerat. Duis vel rutrum tellus, ut consequat est. Proin nec faucibus est, a porttitor velit. Cras mollis nunc id rhoncus euismod. Sed ut risus in elit venenatis malesuada nec a lorem.</p>
-                                    <div class="col-12" data-aos="fade-left">
-                                        <div class="mb-3 icon mail"><a class="" href = "mailto: info@houseofdesigns.co.in ">info@houseofdesigns.co.in </a></div>
-                                        
-                                    </div>
-                                    <div class="col-12 " data-aos="fade-left">
-                                        <div class="mb-3 icon phone"><a class="" href="tel:+918667311305">+91 8667311305</a></div>
-                                        
-                                    </div>
-                                    <div class=" social col-12 mt-3 mt-md-0 mt-lg-0">
-                                        <div class="mb-3 icon follow"><div class="d-flex justify-content-start">
-                                            <a data-aos="fade-left"  href="https://www.instagram.com/house_.of._designs/" target="blank"></a>
-                                            <a data-aos="fade-left"  href="https://www.facebook.com/houseofdesigns.12/?ref=pages_you_manage" target="blank"></a>
-                                        </div></div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image w-100 mt-4 over-backgound-lines">
-                        <a href="https://shortest.link/2InV" target="blank"></a>
-                    </div>
-                </div>
-
-                <!--footer-->
-                <div class="container-full footer pt-4 pb-4">
-                    <div class="row">
-                    </div>
-                </div>
+    <!--Prallax Background-->
+    <div class="parallax_back w-100"></div>
 
 
+
+    <div class="body_wrapper">
+
+        <!--Banner Section-->
+        <div class="banner-wrapper w-100 d-flex justify-content-start align-items-center ">
+            <div class="info p-lg-5 p-md-3 p-sm-2 mt-lg-5 mb-lg-5 mt-md-4 mb-md-4 mt-sm-3 mb-sm-3">
+                <h2 data-aos="fade-right">Creativity is allowing yourself to make mistakes. Design is knowing which ones
+                    to keep.</h2>
             </div>
+        </div>
+
+        <!--Services-->
+        <div id="services" class="row m-0 services pt-5">
+            <div class="w-100 container-sm background_lines">
+                <div class="row h-100">
+                    <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                </div>
+            </div>
+            <div class="container over-backgound-lines">
+                <h1 data-aos="fade-right" class="text-center">SERVICES WE PROVIDE</h1>
+                <div class="row mt-5" data-aos="fade-up">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
+                        <img src='./images/icons/wire(1).png' alt='false-ceelng'>
+                        <p class="text-center mt-2">Electrical Works</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
+                        <img src='./images/icons/ceiling-light.png' alt='Dressing Table'>
+                        <p class="text-center mt-2">False ceiling</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
+                        <img src='./images/icons/plumbing.png' alt='kitchen'>
+                        <p class="text-center mt-2">Plumbing</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
+                        <img src='./images/icons/hand-saw.png' alt='stone-cladding'>
+                        <p class="text-center mt-2">Woodworks</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
+                        <img src='./images/icons/furnitures.png' alt='study-table'>
+                        <p class="text-center mt-2">Furnitures</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
+                        <img src='./images/icons/parquet.png' alt='TV Unit'>
+                        <p class="text-center mt-2">Stone Cladding</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
+                        <img src='./images/icons/wood.png' alt='wardrobe'>
+                        <p class="text-center mt-2">Wooden Flooring</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-6 item">
+                        <img src='./images/icons/window.png' alt='wallpaper'>
+                        <p class="text-center mt-2">Glass Partition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Happy Clients-->
+        <div id="supplier" class="row m-0 supplier pt-5">
+            <div class="w-100 container-sm p-0 background_lines">
+                <div class="row h-100">
+                    <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                </div>
+            </div>
+            <div class="container over-backgound-lines">
+                <h1 data-aos="fade-right" class="text-center">OUR TRUSTED SUPPLIERS</h1>
+                <div class="row mt-5" data-aos="fade-up">
+                    <div class="supplier-container swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/13_aRiKL17s6.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/17_8RBtSBFIt.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/18_u9Nx98RRj.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/1_703qYSv23.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/3_xMB9K5IAU.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/4_LL-KbsNVy.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/8_13tVaPI_7.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/arilam-logo.png" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/aristo.png" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/blum.png" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/D Partners logo184x83-01.webp" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/D Partners logo184x83-08.webp" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/D Partners logo184x83-12.webp" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/ebco-hardware-solutions-logo.png" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/greenply-logo.png" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/haefele_logo.png" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/hettich.png" alt="">
+                            </div>
+                            <div class="swiper-slide inner-items col-lg-2">
+                                <img src="images/projects/Preferred partners/mernino_updated_logo.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next supplier-next">Next</div>
+                <div class="swiper-button-prev supplier-prev">Previous</div>
+            </div>
+        </div>
+
+        <!--About Company-->
+        <div id="about" class="row m-0 about_company pt-5 pb-5">
+            <div class="w-100 container-sm background_lines">
+                <div class="row h-100">
+                    <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                </div>
+            </div>
+            <div>
+                <div class="container over-backgound-lines">
+                    <div class="row m-0 w-100">
+                        <div class="col-12 col-md-5 col-lg-7 image">
+                        </div>
+                        <div class="col-12 col-md-7 col-lg-5 info">
+                            <div class="company">
+                                <h3>ABOUT OUR COMPANY</h3>
+                                <p>House of Design is a Unique interior design company in
+                                    Bangalore offering end to end service in Architecture & Interior.Whether you need a
+                                    minimalistic kitchen or full house interiors.<br />
+
+                                    We strongly believe that the colors and lights play a predominant role in defining
+                                    the taste of your house.<br />
+
+                                    We have expertise to make sure the project runs smoothly and gives you the best
+                                    results possible.Because we are a small design firm, we are extremely flexible &
+                                    nimble.We have relationship with many local craftsman and subcontractors,so you can
+                                    be assured that the project is completed with the higher standards
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Gallery-->
+        <div id="gallery" class="row m-0 projects pt-5">
+            <div class="w-100 container-sm background_lines">
+                <div class="row h-100">
+                    <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                </div>
+            </div>
+            <h1 class="text-center over-backgound-lines">PROJECTS BY US</h1>
+            <div>
+                <div class="container">
+                    <div class="row over-backgound-lines">
+                        <div class="col-12 col-md-6">
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Anshuman</h4>
+                                    <p class="text-center">4 BHK Duplex</p>
+                                </div> -->
+                                <!-- <a href="#" onClick="openProjectImages('project1');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/01.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Ms. Deepika</h4>
+                                    <p class="text-center">3 BHK</p>
+                                </div> -->
+                                <!-- <a href="#" onClick="openProjectImages('project2');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/02.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Mala</h4>
+                                    <p class="text-center">3 BHK</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project6');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/03.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Vijayavel</h4>
+                                    <p class="text-center">3 BHK Villa</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project5');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/04.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Kumar</h4>
+                                    <p class="text-center">3 BHK Villa</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project9');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/05.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Rajeev</h4>
+                                    <p class="text-center">3 BHK Villa</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project8');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/06.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Ms. Tanvi</h4>
+                                    <p class="text-center">3 BHK</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project4');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/07.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Vijayavel</h4>
+                                    <p class="text-center">3 BHK Villa</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project5');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/08.jpg" alt="project_name">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mt-4 mt-md-0">
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Ramprasad</h4>
+                                    <p class="text-center">4 BHK</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project3');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/09.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Sanjay</h4>
+                                    <p class="text-center">3 BHK</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project7');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/10.jpg" alt="project_name">
+                            </div>
+
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Vijayavel</h4>
+                                    <p class="text-center">3 BHK Villa</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project5');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/11.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Vijayavel</h4>
+                                    <p class="text-center">3 BHK Villa</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project5');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/12.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Vijayavel</h4>
+                                    <p class="text-center">3 BHK Villa</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project5');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/13.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Vijayavel</h4>
+                                    <p class="text-center">3 BHK Villa</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project5');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/14.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Vijayavel</h4>
+                                    <p class="text-center">3 BHK Villa</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project5');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/15.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Vijayavel</h4>
+                                    <p class="text-center">3 BHK Villa</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project5');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/16.jpg" alt="project_name">
+                            </div>
+                            <div class="w-100 image-wrapper">
+                                <!-- <div class="info">
+                                    <h4 class="text-center">Mr. Vijayavel</h4>
+                                    <p class="text-center">3 BHK Villa</p>
+                                </div> -->
+
+                                <!-- <a href="#" onClick="openProjectImages('project5');event.preventDefault();"></a> -->
+                                <img src="images/projects/150ppi/17.jpg" alt="project_name">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Team-->
+        <!-- <div id="team" class="row w-100 m-0 our_team pt-5">
+            <div class="w-100 container-sm background_lines p-0">
+                <div class="row h-100 w-100 m-0">
+                    <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                </div>
+            </div>
+            <h2 data-aos="fade-right" class="text-center over-backgound-lines">PEOPLE BEHIND THE IDEA</h2>
+            <h5 data-aos="fade-left" class="text-center over-backgound-lines" style="line-height: 1.5;">We are a Young
+                team of 4, who are passionate towards the designing and understanding the client taste and delivering
+                the projects as per the commitments.
+            </h5>
+            <div>
+                <div class="container">
+                    <div class="row pt-5 over-backgound-lines">
+                        <div class="member col-lg-3 col-md-6" data-aos="zoom-out">
+                            <div class="image"></div>
+                            <div class="info d-flex flex-column align-items-center justify-content-center"
+                                data-aos="fade-up">
+                                <h5 class="mb-4 text-center">Sivaraman</h5>
+                                <p class="designation">Design Consultant</p>
+                            </div>
+                        </div>
+                        <div class="member mt-lg-5 col-lg-3 col-md-6" data-aos="zoom-out">
+                            <div class="image"></div>
+                            <div class="info d-flex flex-column align-items-center justify-content-center"
+                                data-aos="fade-up">
+                                <h5 class="mb-4 text-center">Pradeep </h5>
+                                <p class="designation">Technical Head</p>
+                            </div>
+                        </div>
+                        <div class="member mt-md-5 mt-lg-0 col-lg-3 col-md-6" data-aos="zoom-out">
+                            <div class="image"></div>
+                            <div class="info d-flex flex-column align-items-center justify-content-center"
+                                data-aos="fade-up">
+                                <h5 class="mb-4 text-center">Ganapathy Venkatesh</h5>
+                                <p class="designation">Project Manager</p>
+                            </div>
+                        </div>
+                        <div class="member mt-md-5 mt-lg-5 col-lg-3 col-md-6" data-aos="zoom-out">
+                            <div class="image"></div>
+                            <div class="info d-flex flex-column align-items-center justify-content-center"
+                                data-aos="fade-up">
+                                <h5 class="mb-4 text-center">Ranjith </h5>
+                                <p class="designation">Project Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!--Filler Banner-->
+        <div class="banner-filler container-full p-5">
+            <div class="info">
+                <h1>A room should never allow the eye to settle in one place. It should smile at
+                    you and create fantasy.</h1>
+            </div>
+        </div>
+
+
+        <!--Suppliers-->
+        <!-- <div id="clients" class="row m-0 supplier pt-5">
+            <div class="w-100 container-sm background_lines p-0">
+                <div class="row h-100">
+                    <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                </div>
+            </div>
+            <div>
+                <div class="container ">
+                    <h1 class="text-center over-backgound-lines">Our Clients Testimonies</h1>
+                    <div class="row mt-5 over-backgound-lines">
+                        <div class="supplier-container swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide inner-items col-lg-2">
+                                    <img src="./images/suppliers/blum.png" alt="">
+                                </div>
+                                <div class="swiper-slide inner-items col-lg-2">
+                                    <img src="./images/suppliers/ebco-hardware-solutions-logo.png" alt="">
+                                </div>
+                                <div class="swiper-slide inner-items col-lg-2">
+                                    <img src="./images/suppliers/greenply-logo.png" alt="">
+                                </div>
+                                <div class="swiper-slide inner-items col-lg-2">
+                                    <img src="./images/suppliers/haefele_logo.png" alt="">
+                                </div>
+                                <div class="swiper-slide inner-items col-lg-2">
+                                    <img src="./images/suppliers/hettich.png" alt="">
+                                </div>
+                                <div class="swiper-slide inner-items col-lg-2">
+                                    <img src="./images/suppliers/aristo.png" alt="">
+                                </div>
+                                <div class="swiper-slide inner-items col-lg-2">
+                                    <img src="./images/suppliers/arilam-logo.png" alt="">
+                                </div>
+                                <div class="swiper-slide inner-items col-lg-2">
+                                    <img src="./images/suppliers/mernino_updated_logo.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next">Next</div>
+                    <div class="swiper-button-prev">Previous</div>
+                </div>
+            </div>
+        </div> -->
+
+        <!--map-->
+        <div id="find" class="row w-100 m-0 map">
+            <div class="w-100 container-sm background_lines">
+                <div class="row h-100">
+                    <div class="h-100 border border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right border-left col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                    <div class="h-100 border border-right col-3 col-md-3 col-lg-3"></div>
+                </div>
+            </div>
+            <h1 class="text-center over-backgound-lines">LET'S WORK TOGTHER</h1>
+            <div>
+                <div class="container over-backgound-lines">
+                    <form id="enquiryForm">
+                        <div class="row flex justify-content-end flex-wrap">
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <p class="mb-1">Property Type?</p>
+                                    <div>
+                                        <input type="radio" name="propertyType" id="2_bhk" value="2 BHK">
+                                        <label for="2_bhk">2 BHK</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="2_5_bhk" name="propertyType" value="2.5 BHK">
+                                        <label for="2_5_bhk">2.5 BHK</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="propertyType" id="3_bhk" value="3 BHK">
+                                        <label for="3_bhk">3 BHK</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="3_5_bhk" name="propertyType" value="3.5 BHK">
+                                        <label for="3_5_bhk">3.5 BHK</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="propertyType" id="villa_bunglow"
+                                            value="Villa/Bunglow">
+                                        <label for="villa_bunglow">Villa/Bunglow</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                </div>
+                                <p class="mb-1">Your Budget?</p>
+                                <div>
+                                    <input type="radio" name="budget" id="12_15_lacs" value="6 Lacs - 8 Lacs">
+                                    <label for="12_15_lacs">6 Lacs - 8 Lacs</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="15_18_lacs" name="budget" value="8 Lacs - 12 Lacs">
+                                    <label for="15_18_lacs">8 Lacs - 12 Lacs</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="budget" id="18_lacs" value="Above 12 lacs">
+                                    <label for="18_lacs">Above 12 Lacs</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <p class="mb-1">Property Name?</p>
+                                <div class="input-container mb-3">
+                                    <input type="text" id="propertyName" name="propertyName" />
+                                    <label for="propertyName">Your Answer</label>
+                                </div>
+                                <p class="mb-1">Contact Info *</p>
+                                <div class="input-container">
+                                    <input type="text" name="name" id="name" required />
+                                    <label for="name">Full Name</label>
+                                </div>
+                                <div class="input-container">
+                                    <input type="number" id="phone" name="phone" required />
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                                <div class="input-container">
+                                    <input type="email" name="email" id="email" required />
+                                    <label for="email">Email</label>
+                                </div>
+
+                            </div>
+                            <button type="button" class="enquireBtn w-auto">Send Enquiry</button>
+                        </div>
+
+                    </form>
+                    <div class="row mt-3">
+                        <div class="col-12 col-md-5">
+                            <div class="mb-3 icon mail"><a class=""
+                                    href="mailto: info@houseofdesigns.co.in ">info@houseofdesigns.co.in </a></div>
+
+                        </div>
+                        <div class="col-12 col-md-4 ">
+                            <div class="mb-3 icon phone"><a class="" href="tel:+918667311305">+91 8667311305</a>
+                            </div>
+
+                        </div>
+                        <div class=" social col-12 col-md-3 mt-3 mt-md-0 mt-lg-0">
+                            <div class="mb-3 icon follow">
+                                <div class="d-flex justify-content-start">
+                                    <a href="https://www.instagram.com/house_.of._designs/" target="blank"></a>
+                                    <a href="https://www.facebook.com/houseofdesigns.12/?ref=pages_you_manage"
+                                        target="blank"></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image w-100 mt-4 over-backgound-lines">
+                <a href="https://g.co/kgs/dK4dZV" target="blank"></a>
+            </div>
+        </div>
+
+        <!--footer-->
+        <div class="container-full footer pt-4 pb-4">
+            <div class="row">
+            </div>
+        </div>
+
+
+    </div>
 
 
 
 
 
 
-            <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-                
-            <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-            <script src="js/image-sliders.js"></script>
-            <script src="js/aos.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-            <script src="images/logo_animation.json"></script>
-            <script src="js/script.js"></script>
-        </body>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/image-sliders.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js"
+        integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js"
+        integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="images/logo_animation.json"></script>
+    <script src="js/script.js"></script>
+</body>
+
 </html>
